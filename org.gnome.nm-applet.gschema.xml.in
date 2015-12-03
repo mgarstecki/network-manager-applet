@@ -36,6 +36,11 @@
       <summary>Show the applet in notification area</summary>
       <description>Set to FALSE to disable displaying the applet in the notification area.</description>
     </key>
+    <key name="hide-unmanaged-devices" type="b">
+      <default>false</default>
+      <summary>Hide unmanaged devices from the applet.</summary>
+      <description>Set to TRUE to hide unmanaged devices from the applet.</description>
+    </key>
   </schema>
   <schema id="org.gnome.nm-applet.eap">
     <key name="ignore-ca-cert" type="b">

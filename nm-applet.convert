@@ -6,3 +6,4 @@ suppress-wireless-networks-available = /apps/nm-applet/suppress-wireless-network
 stamp = /apps/nm-applet/stamp
 disable-wifi-create = /apps/nm-applet/disable-wifi-create
 show-applet = /apps/nm-applet/show-applet
+hide-unmanaged-devices = /apps/nm-applet/hide-unmanaged-devices

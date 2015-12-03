@@ -1450,7 +1450,8 @@ nma_menu_device_get_menu_item (NMDevice *device,
 		break;
 	}
 
-	if (!managed) {
+	if (   !managed
+      && !g_settings_get_boolean(applet->gsettings, PREF_HIDE_UNMANAGED_DEVICES)) {
 		item = gtk_menu_item_new_with_label (_("device not managed"));
 		gtk_widget_set_sensitive (item, FALSE);
 	}

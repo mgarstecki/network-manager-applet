@@ -67,6 +67,7 @@ typedef struct
 #define PREF_DISABLE_WIFI_CREATE                  "disable-wifi-create"
 #define PREF_SUPPRESS_WIFI_NETWORKS_AVAILABLE     "suppress-wireless-networks-available"
 #define PREF_SHOW_APPLET                          "show-applet"
+#define PREF_HIDE_UNMANAGED_DEVICES               "hide-unmanaged-devices"
 
 #define ICON_LAYER_LINK 0
 #define ICON_LAYER_VPN 1
