@@ -879,7 +879,7 @@ void applet_do_notify_with_pref (NMApplet *applet,
 {
 	if (g_settings_get_boolean (applet->gsettings, pref))
 		return;
-	
+
 	applet_do_notify (applet, NOTIFY_URGENCY_LOW, summary, message, icon, pref,
 	                  _("Don't show this message again"),
 	                  notify_dont_show_cb,
@@ -1183,7 +1183,7 @@ nma_menu_vpn_item_clicked (GtkMenuItem *item, gpointer user_data)
 	                                     activate_vpn_cb,
 	                                     info);
 	start_animation_timeout (applet);
-		
+
 //	nmi_dbus_signal_user_interface_activated (applet->connection);
 }
 
@@ -1450,7 +1450,7 @@ nma_menu_device_get_menu_item (NMDevice *device,
 		break;
 	}
 
-	if (   !managed
+  if (   !managed
       && !g_settings_get_boolean(applet->gsettings, PREF_HIDE_UNMANAGED_DEVICES)) {
 		item = gtk_menu_item_new_with_label (_("device not managed"));
 		gtk_widget_set_sensitive (item, FALSE);
@@ -1617,7 +1617,7 @@ nma_menu_add_vpn_submenu (GtkWidget *menu, NMApplet *applet)
 
 		gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (item), !!active);
 
-		g_object_set_data_full (G_OBJECT (item), "connection", 
+		g_object_set_data_full (G_OBJECT (item), "connection",
 						    g_object_ref (connection),
 						    (GDestroyNotify) g_object_unref);
 
@@ -2126,7 +2126,7 @@ applet_add_default_connection_item (NMDevice *device,
 {
 	AppletMenuItemInfo *info;
 	GtkWidget *item;
-	
+
 	item = gtk_check_menu_item_new_with_label (label);
 	gtk_widget_set_sensitive (GTK_WIDGET (item), sensitive);
 	gtk_check_menu_item_set_draw_as_radio (GTK_CHECK_MENU_ITEM (item), TRUE);
@@ -3206,7 +3206,7 @@ static void
 status_icon_activate_cb (GtkStatusIcon *icon, NMApplet *applet)
 {
 	/* Have clicking on the applet act also as acknowledgement
-	 * of the notification. 
+	 * of the notification.
 	 */
 	applet_clear_notify (applet);
 
@@ -3236,7 +3236,7 @@ status_icon_popup_menu_cb (GtkStatusIcon *icon,
                            NMApplet *applet)
 {
 	/* Have clicking on the applet act also as acknowledgement
-	 * of the notification. 
+	 * of the notification.
 	 */
 	applet_clear_notify (applet);
 
@@ -3533,4 +3533,3 @@ nm_applet_new (void)
 	}
 	return applet;
 }
-

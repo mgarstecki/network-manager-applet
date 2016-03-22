@@ -58,7 +58,7 @@
 typedef struct
 {
 	GObjectClass	parent_class;
-} NMAppletClass; 
+} NMAppletClass;
 
 #define APPLET_PREFS_SCHEMA "org.gnome.nm-applet"
 #define PREF_DISABLE_CONNECTED_NOTIFICATIONS      "disable-connected-notifications"
